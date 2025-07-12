@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeePee - Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://uploads.onecompiler.io/42u85s7sh/43qf7wwpe/IMG_3666.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    #fireCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .profile-container {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      margin: auto;
+    }
+
+    .fire-ring {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      pointer-events: none;
+      background: conic-gradient(
+        from 0deg,
+        #ff9933,
+        #ff6600,
+        #ff3300,
+        #ff6600,
+        #ff9933
+      );
+      filter: blur(4px) brightness(1.8);
+      animation: spinRing 1.2s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes spinRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .profile-img {
+      position: relative;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 4px solid white;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center relative">
+
+  <!-- เอฟเฟกต์วงแหวนไฟล้อมรอบรูป -->
+  <div class="relative z-10 bg-white/30 p-6 rounded-lg backdrop-blur-md text-center max-w-sm w-full">
+    <div class="profile-container">
+      <div class="fire-ring"></div>
+      <div class="profile-img w-full h-full">
+        <img src="https://uploads.onecompiler.io/43qeseht9/43qesg8sj/720c3bd0-57ef-11f0-a3a6-df060f58560a.jpeg" alt="Avatar" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <h1 class="text-2xl font-bold mt-4 text-white">ⓅⒺⒺ ↺ 99%</h1>
+    <p class="italic text-white mt-1">"Live life on the path"</p>
+    
+    <div class="mt-5 flex justify-center space-x-4">
+      <a href="https://www.facebook.com/share/19MUyLApZ5/" target="_blank" class="inline-flex items-center bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700">
+        <img class="w-5 h-5 mr-2 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt=""> Facebook
+      </a>
+      <a href="https://www.instagram.com/phira.mxth?igsh=cWN3MmttbmlzOGxn" target="_blank" class="inline-flex items-center bg-pink-500 px-4 py-2 rounded-lg text-white hover:bg-pink-600">
+        <img class="w-5 h-5 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt=""> Instagram
+      </a>
+    </div>
+
+    <p class="text-xs text-black-200 mt-4">© 2003 PeePee</p>
+  </div>
+</body>
+</html>
